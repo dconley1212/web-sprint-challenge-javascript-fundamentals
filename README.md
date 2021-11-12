@@ -42,10 +42,13 @@ Edit this document to include your answers after each question. Make sure to lea
 Closure is when a nested(inner) function will reach outside of its function and will grab a variable's value that it couldn't find within it's own scope. The outer function can't pull variables from a nested function. It is a one way street where only the nested function can pull a variable value from outside its scope.
 
 4. Describe the four principles of the 'this' keyword.
-   -Window Binding: if 'this' isn't given any context it will return window, the global object in node or undefined in strict mode.
+   Window Binding: if 'this' isn't given any context it will return window, the global object in node or undefined in strict mode.
 
-- Implicit Binding: applies to objects with methods, and it's when a function is invoked you should look to the left of the dot to know what 'this' refers to.
-- Explicit Binding: it's when we tell a function what the 'this' keyword should be using .call, .apply, or .bind. .Call is when a function is invoked immediately and the arguments are passed 1 by 1. .Apply is when a function is invoked immediately and pass the arguments as an array. And .bind you pass in the arguments 1 by 1 and it won't be invoked immediately, but it will create a new function that can be used later.
+Implicit Binding: applies to objects with methods, and it's when a function is invoked you should look to the left of the dot to know what 'this' refers to.
+
+Explicit Binding: it's when we tell a function what the 'this' keyword should be using .call, .apply, or .bind. .Call is when a function is invoked immediately and the arguments are passed 1 by 1. .Apply is when a function is invoked immediately and pass the arguments as an array. And .bind you pass in the arguments 1 by 1 and it won't be invoked immediately, but it will create a new function that can be used later.
+
+New Binding: It is when a function is invoked with a new keyword and the this keyword inside that function is bound to the new object being constructed. When a function is invoked as a constructor function using the new keyword, this points to the new object that's created.
 
 5. Why do we need super() in an extended class?
    We need super() because it helps us inherit all of the properties from the parent constructor function.
